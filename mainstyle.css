@@ -1,0 +1,103 @@
+body{
+    justify-content: center;
+    align-content: center;
+}
+h1{
+    position: fixed;
+    text-align: center;
+    color:white;
+}
+
+.container-fluid{
+    background-color: #1e1e1e;
+    z-index:0;
+    width:1536px;
+    height:721px;
+    margin:0
+}
+.art{
+    border-radius: 15px;
+    box-shadow:0 10px 10px 5px white;
+    position: fixed;
+    top:12%;
+    left:25%;
+    background-image:linear-gradient(rgb(250, 246, 246),white);
+    z-index: 1;
+    width: 50%;
+    height: 75%;
+    opacity: 30%;
+    border-radius: 5%;
+}
+.fis{
+    position: relative;
+    top:70%;
+    left:25%;
+    margin-left:7%;
+}
+.icons{
+    display:inline;
+}
+
+.volume{
+    position: relative;
+    top:80%;
+    left:37%;
+}
+.progressBar{
+    width: 50%;
+    flex:0;
+    flex-basis: 0;
+    background-image: linear-gradient(to right,#00008f,#001c50);
+}
+img{
+    border-radius: 100%;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left:37%;
+    top:12%;
+    box-shadow: 0 10px 10px black;
+}
+.title{
+    position: absolute;
+    left:32%;
+    top:55%
+}
+.progresscheck{
+    display: flex;
+    flex:10;
+    position: relative;
+    top:68%;
+    width: 100%;
+    background-color:skyblue ;
+    flex-basis: 100%;
+    height: 5px;
+    
+}
+@media screen and (max-width:755px) {
+    .fis{
+        position: relative;
+        top:70%;
+        left:8%;
+    }
+    img{
+        height: 150px;
+        width: 150px;
+        position:absolute;
+        left:22%;
+    }
+    .title{
+        position: absolute;
+        top:47%;
+        left:12%;
+    }
+    .volume{
+        position: relative;
+        top:75%;
+        left:10%;
+    }
+    .progresscheck{
+        position: relative;
+        top:62%;
+    }
+}
