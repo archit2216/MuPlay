@@ -9,30 +9,48 @@ h1{
 }
 
 .container-fluid{
-    background-color: #1e1e1e;
-    z-index:0;
     width:1536px;
     height:721px;
-    margin:0
+    margin:0;
+    background-color: #433D3C;
 }
 .art{
     border-radius: 15px;
-    box-shadow:0 10px 10px 5px white;
+    box-shadow:0 10px 30px 5px white;
     position: fixed;
     top:12%;
     left:25%;
-    background-image:linear-gradient(rgb(250, 246, 246),white);
+    background-image:-webkit-linear-gradient(45deg, #A6F0C6 40%,#D8F8B7 60%);
     z-index: 1;
     width: 50%;
     height: 75%;
     opacity: 30%;
     border-radius: 5%;
 }
+.art2{
+    text-align: center;
+    border-radius: 15px;
+    box-shadow:0 10px 30px 5px white;
+    position: fixed;
+    top:12%;
+    left:80%;
+    background-image:-webkit-linear-gradient(45deg, #A6F0C6 40%,#D8F8B7 60%);
+    z-index: 1;
+    width: 12%;
+    height: 75%;
+    opacity: 30%;
+    border-radius: 5%;
+}
+.btn-success{
+    margin-top: 15px;
+    object-fit:cover;
+}
 .fis{
     position: relative;
     top:70%;
     left:25%;
     margin-left:7%;
+    border-radius: 15px;
 }
 .icons{
     display:inline;
