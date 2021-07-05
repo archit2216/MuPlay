@@ -1,4 +1,4 @@
-var playButton=document.querySelector(".play");
+var playButton=document.querySelector(".pause");
 var next=document.querySelector(".next");
 var back=document.querySelector(".back");
 var artimg=document.querySelector("img");
@@ -17,15 +17,15 @@ var artists=["Alan Walker - Faded","Wake Up Call (feat. Trippie Redd)","Charlie 
 var images=["alan walker.png","ksi.jpg","charlie puth.jfif","o-zone.jfif","Hymn for the Weekend.jpg"];
 let index=0;
 function changePlay(){
-    if(this.classList.contains("fa-play")){
-    this.classList.remove("fa-play");
-    this.classList.add("fa-pause");
+    if(this.classList.contains("fa-pause")){
+    this.classList.remove("fa-pause");
+    this.classList.add("fa-play");
     audio.pause();
     }
     else
     {
-    this.classList.remove("fa-pause");
-    this.classList.add("fa-play");
+    this.classList.remove("fa-play");
+    this.classList.add("fa-pause");
     audio.play();
     }
 }
@@ -40,11 +40,11 @@ function playNext(){
     audio.src="songs/"+artists[index]+".mp3";
     if(playButton.classList.contains("fa-play"))
     {
-        audio.play();
+        audio.pause();
     }
     else
     {
-        audio.pause();
+        audio.play();
     }
 }
 function playPrev(){
@@ -55,14 +55,14 @@ function playPrev(){
     }
     heading.innerHTML=artists[index];
     artimg.src="images/"+images[index]+"";
-    if(playButton.classList.contains("fa-play")){
-        playButton.classList.remove("fa-play");
-        playButton.classList.add("fa-pause");
+    if(playButton.classList.contains("fa-pause")){
+        playButton.classList.remove("fa-pause");
+        playButton.classList.add("fa-play");
     }
     audio.pause();
 
     audio.src="songs/"+artists[index]+".mp3";
-    if(playButton.classList.contains("fa-play")){
+    if(playButton.classList.contains("fa-pause")){
     audio.play();
     }
 }
