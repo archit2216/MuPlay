@@ -7,15 +7,30 @@ var sound=document.querySelector(".sound");
 var audio=document.querySelector("audio");
 var progress=document.querySelector(".progresscheck");
 var progressBar=document.querySelector(".progressBar");
+var songbuttons=document.querySelectorAll(".btn-success");
+for(var i=0;i<5;i++)
+{
+    var req=(songbuttons[i].classList)[2];
+    songbuttons[i].addEventListener("click",playMySong);
+}
 
 sound.addEventListener("change",handlevol);
 next.addEventListener("click",playNext);
 back.addEventListener("click",playPrev);
 playButton.addEventListener("click",changePlay);
 audio.addEventListener("timeupdate",handleprogress);
+
 var artists=["Alan Walker - Faded","Wake Up Call (feat. Trippie Redd)","Charlie Puth - Attention","O-Zone - Dragostea Din Tei","Coldplay - Hymn For The Weekend"];
 var images=["alan walker.png","ksi.jpg","charlie puth.jfif","o-zone.jfif","Hymn for the Weekend.jpg"];
 let index=0;
+
+function playMySong(){
+    index=parseInt((this.classList)[2]);
+    artimg.src="images/"+images[index]+"";
+    heading.innerHTML=artists[index];
+    audio.src="songs/"+artists[index]+".mp3";
+    audio.play();
+}
 function changePlay(){
     if(this.classList.contains("fa-pause")){
     this.classList.remove("fa-pause");
