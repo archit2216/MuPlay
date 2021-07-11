@@ -1,59 +1,58 @@
-body{
-    justify-content: center;
-    align-content: center;
-}
 h1{
     position: fixed;
     text-align: center;
-    color:white;
-}
 
+}
 .container-fluid{
-    width:1536px;
     height:721px;
+    width:100%;
     margin:0;
-    background-color: #151515;
+    background-color: #78DEC7;
+    display:flex;
 }
 .art{
     border-radius: 15px;
-    box-shadow:0 10px 30px 5px white;
+    box-shadow:0 1px 1px 5px white;
     position: fixed;
     top:12%;
     left:25%;
-    background-image:-webkit-linear-gradient(45deg, #A6F0C6 40%,#D8F8B7 60%);
-    z-index: 1;
+    background-image:-webkit-linear-gradient(45deg, #A6F0C6 40%,#B5EAEA 60%);
     width: 50%;
     height: 75%;
-    opacity: 30%;
     border-radius: 5%;
 }
 .art2{
     text-align: center;
     border-radius: 15px;
-    box-shadow:0 10px 30px 5px white;
+    box-shadow:0 1px 1px 5px white;
     position: fixed;
     top:12%;
     left:80%;
-    background-image:-webkit-linear-gradient(45deg, #A6F0C6 40%,#D8F8B7 60%);
-    z-index: 1;
+    background-image:-webkit-linear-gradient(45deg, #A6F0C6 40%,#B5EAEA 60%);
     width: 12%;
     height: 75%;
-    opacity: 30%;
     border-radius: 5%;
 }
 .btn-success{
-    margin-top: 15px;
-    object-fit:cover;
+    margin-top: 10px;
+    font-size: 100%;
+    width:100%;
 }
 .fis{
-    position: relative;
-    top:70%;
-    left:25%;
-    margin-left:7%;
+    margin-left:15%;
     border-radius: 15px;
+}
+.just{
+    width:100%;
+    position:sticky;
+    top:68%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .icons{
     display:inline;
+    width: 50%;
 }
 
 .volume{
@@ -73,7 +72,7 @@ img{
     height: 200px;
     width: 200px;
     left:37%;
-    top:12%;
+    top:8%;
     box-shadow: 0 10px 10px black;
 }
 .title{
@@ -92,11 +91,17 @@ img{
     height: 5px;
     
 }
-@media screen and (max-width:755px) {
+@media screen and(max-width:1024px) {
+    .just{
+        top:60%;
+    }
     .fis{
-        position: relative;
-        top:70%;
-        left:8%;
+        margin-left: 5%;
+    }
+}
+ @media screen and (max-width:768px) {
+    .fis{
+        margin-left: 7%;
     }
     img{
         height: 150px;
@@ -118,4 +123,24 @@ img{
         position: relative;
         top:62%;
     }
-}
+    .just{
+        display: flex;
+        flex-shrink: 1;
+        flex-basis:1 ;
+        top:60%;
+        width:100%;
+    }
+    .icons{
+        display: inline;
+        width:100%;
+    }
+    .art{
+        width: 70%;
+        left: 15%;
+        
+    }
+    .art2{
+        object-fit: scale-down;
+        display: none;
+    }
+} 
